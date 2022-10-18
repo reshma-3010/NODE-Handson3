@@ -13,12 +13,12 @@ const middleware2=(req,res,next)=>{
 app.use(middleware2);
 
 
-app.get('/',(req,res)=>{
+app.get('/',middleware1,(req,res)=>{
     res.send("Home Page");
     res.end();
 })
 
-app.get('/about',(req,res)=>{
+app.get('/about',middleware1,(req,res)=>{
     res.send("About Page");
     res.end();
 })
